@@ -51,18 +51,30 @@ library
     -- Modules exported by the library.
     exposed-modules:
         Solutions
-
+        Utils
 
     -- Modules included in this library but not exported.
     other-modules:
-        Solutions.EvenFibonacciNumbers
+        Solutions.Problem1
+        Solutions.Problem2
+        Solutions.Problem3
+        Solutions.Problem4
+        Solutions.Problem5
+        Solutions.Problem6
+        Solutions.Problem7
+        Solutions.Problem8
+        Solutions.Problem9
+        Solutions.Problem10
         Utils.Fibonacci
+        Utils.PrimeNumbers
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.16.4.0
+    build-depends:    array >= 0.5.4.0,
+                      base ^>=4.16.4.0,
+                      containers >= 0.6.5.1
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -82,8 +94,10 @@ executable project-euler
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.16.4.0,
-        project-euler
+                  array >= 0.5.4.0,
+                  base ^>=4.16.4.0,
+                  containers >= 0.6.5.1,
+                  project-euler
 
     -- Directories containing source files.
     hs-source-dirs:   app
@@ -104,5 +118,9 @@ test-suite project-euler-test
     -- The entrypoint to the test suite.
     main-is:          MyLibTest.hs
 
+    other-modules:
+        Utils
     -- Test dependencies.
-    build-depends:    base ^>=4.16.4.0
+    build-depends:    array >= 0.5.4.0,
+                      base ^>=4.16.4.0,
+                      containers >= 0.6.5.1

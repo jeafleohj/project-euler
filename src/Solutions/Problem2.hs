@@ -1,6 +1,6 @@
-module Solutions.EvenFibonacciNumbers where
+module Solutions.Problem2 where
 
 import Utils.Fibonacci
 
-evenFibonacciNumbers =
+problem2 =
   (sum . filter even . takeWhile (<= 4 * 10 ^ 6)) fibs
